@@ -4,6 +4,7 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.46.0'
     id 'distribution'
     id 'application'
+    id 'checkstyle'
 }
 
 group 'hexlet.code'
@@ -30,4 +31,8 @@ application {
 
 compileJava {
     options.release = 17
+}
+
+run {
+    standardInput = System.in
 }
