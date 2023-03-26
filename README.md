@@ -4,4 +4,4 @@
 # Brain games
 
 ### Video with even/odd game
-[(https://asciinema.org/a/i0efaVcVyrXVSodiXaGju33Q4)]
+[Video even/odd](https://asciinema.org/a/i0efaVcVyrXVSodiXaGju33Q4)
