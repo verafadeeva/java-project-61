@@ -5,7 +5,7 @@
 build
 
 # Ignore Idea build directory
-**/out/
+out
 
 **/logs/
 
