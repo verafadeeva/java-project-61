@@ -8,3 +8,6 @@
 
 ### Video with calc game
 [Video calc](https://asciinema.org/a/6a3SXe7taSYgXpouf67MyrlLo)
+
+### Video with gcd game
+[Video gcd](https://asciinema.org/a/aE9Lx2BsAvxq9noRyN28wTA4q)
