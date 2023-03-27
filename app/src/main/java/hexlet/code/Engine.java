@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.game.Calc;
+import hexlet.code.game.Odd;
+
 public class Engine {
     public static String username;
     public static String answer;

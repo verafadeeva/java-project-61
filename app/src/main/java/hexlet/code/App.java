@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.game.Calc;
+import hexlet.code.game.Odd;
+
 import java.util.Scanner;
 
 public class App {
