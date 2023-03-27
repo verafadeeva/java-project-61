@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.game.Calc;
+import hexlet.code.game.Gcd;
 import hexlet.code.game.Odd;
 
 public class Engine {
@@ -21,6 +22,10 @@ public class Engine {
                 System.exit(0);
             }
             if ((gameCode == 3) && (!Calc.gameCalc())) {
+                wrongAnswer(answer, corrAnswer);
+                System.exit(0);
+            }
+            if ((gameCode == 4) && (!Gcd.gameGcd())) {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);
             }

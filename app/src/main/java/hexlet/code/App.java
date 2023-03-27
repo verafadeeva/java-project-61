@@ -15,6 +15,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String s = scanner.next();
@@ -23,6 +24,9 @@ public class App {
             Odd.chet();
         } else if (s.equals("3")) {
             gameCode = 3;
+            Calc.calc();
+        } else if (s.equals("4")) {
+            gameCode = 4;
             Calc.calc();
         } else {
             return;
