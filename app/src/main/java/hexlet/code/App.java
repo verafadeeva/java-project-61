@@ -1,10 +1,7 @@
 package hexlet.code;
 
-import hexlet.code.game.Progression;
-import hexlet.code.game.Prime;
-import hexlet.code.game.Odd;
-import hexlet.code.game.Calc;
-import hexlet.code.game.Gcd;
+import hexlet.code.game.*;
+import hexlet.code.game.Sequence;
 
 import java.util.Scanner;
 
@@ -19,28 +16,52 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
+        System.out.println("5 - Sequence");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-        String s = scanner.next();
-        if (s.equals("2")) {
+        String answer = scanner.next();
+        switch (answer) {
+            case ("2"):
+                gameCode = 2;
+                Odd.chet();
+                break;
+            case ("3"):
+                gameCode = 3;
+                Calc.calc();
+                break;
+            case ("4"):
+                gameCode = 4;
+                Gcd.gcd();
+                break;
+            case ("5"):
+                gameCode = 5;
+                Sequence.sequence();
+                break;
+            case ("6"):
+                gameCode = 6;
+                Prime.prime();
+                break;
+            default:
+                System.exit(0);
+        }
+        /* if (answer.equals("2")) {
             gameCode = 2;
             Odd.chet();
-        } else if (s.equals("3")) {
+        } else if (answer.equals("3")) {
             gameCode = 3;
             Calc.calc();
-        } else if (s.equals("4")) {
+        } else if (answer.equals("4")) {
             gameCode = 4;
             Gcd.gcd();
-        } else if (s.equals("5")) {
-            gameCode = 5;
-            Progression.prograssion();
-        } else if (s.equals("6")) {
+        } else if (answer.equals("5")) {
+            gameCode = answer;
+            Sequence.prograssion();
+        } else if (answer.equals("6")) {
             gameCode = 6;
             Prime.prime();
         } else {
             System.exit(0);
-        }
+        }*/
     }
 }

@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.game.Progression;
+import hexlet.code.game.Sequence;
 import hexlet.code.game.Prime;
 import hexlet.code.game.Odd;
 import hexlet.code.game.Calc;
@@ -31,7 +31,7 @@ public class Engine {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);
             }
-            if ((gameCode == 5) && (!Progression.gameProgression())) {
+            if ((gameCode == 5) && (!Sequence.gameSequence())) {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);
             }

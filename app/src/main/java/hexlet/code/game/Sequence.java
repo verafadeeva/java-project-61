@@ -5,9 +5,9 @@ import hexlet.code.Engine;
 import org.apache.commons.lang3.math.NumberUtils;
 import java.util.Random;
 
-public class Progression {
+public class Sequence {
 
-    public static boolean gameProgression() {
+    public static boolean gameSequence() {
         Random random = new Random();
         int seed = random.nextInt(8) + 1;
         int[] posled = new int[10];
@@ -33,7 +33,7 @@ public class Progression {
         }
         return true;
     }
-    public static void prograssion() {
+    public static void sequence() {
         Engine.gameStart();
         System.out.println("What number is missing in the progression?");
         Engine.gameCore(App.gameCode);
