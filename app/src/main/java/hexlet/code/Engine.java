@@ -1,9 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.game.Progression;
+import hexlet.code.game.Prime;
+import hexlet.code.game.Odd;
 import hexlet.code.game.Calc;
 import hexlet.code.game.Gcd;
-import hexlet.code.game.Odd;
-import hexlet.code.game.Progression;
 
 public class Engine {
     public static String username;
@@ -31,6 +32,10 @@ public class Engine {
                 System.exit(0);
             }
             if ((gameCode == 5) && (!Progression.gameProgression())) {
+                wrongAnswer(answer, corrAnswer);
+                System.exit(0);
+            }
+            if ((gameCode == 6) && (!Prime.gamePrime())) {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);
             }
