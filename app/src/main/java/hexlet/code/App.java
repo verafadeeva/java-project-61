@@ -22,6 +22,9 @@ public class App {
         System.out.print("Your choice: ");
         String answer = scanner.next();
         switch (answer) {
+            case ("1"):
+                Engine.gameStart();
+                break;
             case ("2"):
                 gameCode = 2;
                 Odd.chet();
