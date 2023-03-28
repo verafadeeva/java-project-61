@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.game.Calc;
 import hexlet.code.game.Gcd;
 import hexlet.code.game.Odd;
+import hexlet.code.game.Progression;
 
 public class Engine {
     public static String username;
@@ -26,6 +27,10 @@ public class Engine {
                 System.exit(0);
             }
             if ((gameCode == 4) && (!Gcd.gameGcd())) {
+                wrongAnswer(answer, corrAnswer);
+                System.exit(0);
+            }
+            if ((gameCode == 5) && (!Progression.gameProgression())) {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);
             }

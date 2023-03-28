@@ -11,3 +11,6 @@
 
 ### Video with gcd game
 [Video gcd](https://asciinema.org/a/aE9Lx2BsAvxq9noRyN28wTA4q)
+
+### Video with Subsequence game
+[Video Subseq](https://asciinema.org/a/eFhWVLfVzzfOcYNEWG3srVx7B)
