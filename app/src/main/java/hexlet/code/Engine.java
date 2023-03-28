@@ -18,7 +18,8 @@ public class Engine {
     }
 
     public static void gameCore(int gameCode) {
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             if ((gameCode == 2) && (!Odd.gameChet())) {
                 wrongAnswer(answer, corrAnswer);
                 System.exit(0);

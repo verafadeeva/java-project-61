@@ -9,8 +9,9 @@ public class Calc {
 
     public static boolean gameCalc() {
         Random random = new Random();
-        int a = random.nextInt(20);
-        int b = random.nextInt(20);
+        int randomSeed = 20; //random seed
+        int a = random.nextInt(randomSeed);
+        int b = random.nextInt(randomSeed);
         int operand = random.nextInt(3);
         switch (operand) {
             case (0):
@@ -53,7 +54,7 @@ public class Calc {
     public static void calc() {
         Engine.gameStart();
         System.out.println("What is the result of the expression?");
-        Engine.gameCore(App.gameCode);
+        Engine.gameCore(App.getGameCode());
         Engine.epicWin();
     }
 }

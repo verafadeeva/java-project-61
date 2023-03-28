@@ -9,7 +9,8 @@ public class Prime {
 
     public static boolean gamePrime() {
         Random random = new Random();
-        int num = random.nextInt(100);
+        int randomSeed = 100; //random seed
+        int num = random.nextInt(randomSeed);
         if (Primes.isPrime(num)) {
             Engine.corrAnswer = "yes";
         } else {
@@ -22,7 +23,7 @@ public class Prime {
     public static void prime() {
         Engine.gameStart();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        Engine.gameCore(App.gameCode);
+        Engine.gameCore(App.getGameCode());
         Engine.epicWin();
     }
 

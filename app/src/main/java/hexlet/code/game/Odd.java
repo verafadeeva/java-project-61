@@ -9,7 +9,8 @@ public class Odd {
 
     public static boolean gameChet() {
         Random random = new Random();
-        int num = random.nextInt(100);
+        int randomSeed = 20; //random seed
+        int num = random.nextInt(randomSeed);
         if (num % 2 == 0) {
             Engine.corrAnswer = "yes";
         } else {
@@ -23,7 +24,7 @@ public class Odd {
     public static void chet() {
         Engine.gameStart();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Engine.gameCore(App.gameCode);
+        Engine.gameCore(App.getGameCode());
         Engine.epicWin();
     }
 }

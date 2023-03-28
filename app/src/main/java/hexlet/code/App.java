@@ -1,14 +1,19 @@
 package hexlet.code;
 
-import hexlet.code.game.*;
 import hexlet.code.game.Sequence;
-
+import hexlet.code.game.Prime;
+import hexlet.code.game.Odd;
+import hexlet.code.game.Calc;
+import hexlet.code.game.Gcd;
 import java.util.Scanner;
 
 public class App {
-    public static Scanner scanner;
-    public static int gameCode;
+    static Scanner scanner;
+    private static int gameCode;
 
+    public static int getGameCode() {
+        return gameCode;
+    }
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");

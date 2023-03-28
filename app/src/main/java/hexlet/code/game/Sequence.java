@@ -9,12 +9,14 @@ public class Sequence {
 
     public static boolean gameSequence() {
         Random random = new Random();
-        int seed = random.nextInt(8) + 1;
+        int randomSeed = 8; //random seed
+        int seed = random.nextInt(randomSeed) + 1;
         int[] posled = new int[10];
         for (int i = 0; i < posled.length; i++) {
             posled[i] = i * seed;
         }
-        int hiddenElem = random.nextInt(10);
+        randomSeed = 10; //random seed
+        int hiddenElem = random.nextInt(randomSeed);
         Engine.corrAnswer = String.valueOf(posled[hiddenElem]);
         String s = "";
         for (int i = 0; i < posled.length; i++) {
@@ -36,7 +38,7 @@ public class Sequence {
     public static void sequence() {
         Engine.gameStart();
         System.out.println("What number is missing in the progression?");
-        Engine.gameCore(App.gameCode);
+        Engine.gameCore(App.getGameCode());
         Engine.epicWin();
     }
 }

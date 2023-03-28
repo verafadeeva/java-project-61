@@ -19,8 +19,9 @@ public class Gcd {
 
     public static boolean gameGcd() {
         Random random = new Random();
-        int a = random.nextInt(100);
-        int b = random.nextInt(100);
+        int randomSeed = 20; //random seed
+        int a = random.nextInt(randomSeed);
+        int b = random.nextInt(randomSeed);
         Engine.corrAnswer = String.valueOf(nod(a, b));
         Engine.question(String.valueOf(a) + " " + String.valueOf(b));
         if ((!NumberUtils.isCreatable(Engine.answer)) && (Engine.answer != null)) {
@@ -35,7 +36,7 @@ public class Gcd {
     public static void gcd() {
         Engine.gameStart();
         System.out.println("Find the greatest common divisor of given numbers.");
-        Engine.gameCore(App.gameCode);
+        Engine.gameCore(App.getGameCode());
         Engine.epicWin();
     }
 }
