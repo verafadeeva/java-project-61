@@ -8,9 +8,12 @@ import hexlet.code.game.Gcd;
 import java.util.Scanner;
 
 public class App {
-    static Scanner scanner;
+    private static Scanner scanner;
     private static int gameCode;
 
+    public static Scanner getScanner() {
+        return scanner;
+    }
     public static int getGameCode() {
         return gameCode;
     }

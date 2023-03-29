@@ -9,15 +9,14 @@ public class Prime {
 
     public static boolean gamePrime() {
         Random random = new Random();
-        int randomSeed = 100; //random seed
-        int num = random.nextInt(randomSeed);
+        int num = random.nextInt(100);
         if (Primes.isPrime(num)) {
-            Engine.corrAnswer = "yes";
+            Engine.setCorrectAnswer("yes");
         } else {
-            Engine.corrAnswer = "no";
+            Engine.setCorrectAnswer("no");
         }
         Engine.question(String.valueOf(num));
-        return (Engine.answer.equalsIgnoreCase(Engine.corrAnswer));
+        return (Engine.getAnswer().equalsIgnoreCase(Engine.getCorrectAnswer()));
     }
 
     public static void prime() {

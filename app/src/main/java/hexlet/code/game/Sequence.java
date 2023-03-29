@@ -9,28 +9,26 @@ public class Sequence {
 
     public static boolean gameSequence() {
         Random random = new Random();
-        int randomSeed = 8; //random seed
-        int seed = random.nextInt(randomSeed) + 1;
-        int[] posled = new int[10];
-        for (int i = 0; i < posled.length; i++) {
-            posled[i] = i * seed;
+        int seed = random.nextInt(8) + 1;
+        int[] sequence = new int[10];
+        for (int i = 0; i < sequence.length; i++) {
+            sequence[i] = i * seed;
         }
-        randomSeed = 10; //random seed
-        int hiddenElem = random.nextInt(randomSeed);
-        Engine.corrAnswer = String.valueOf(posled[hiddenElem]);
+        int hiddenElem = random.nextInt(10);
+        Engine.setCorrectAnswer(String.valueOf(sequence[hiddenElem]));
         String s = "";
-        for (int i = 0; i < posled.length; i++) {
+        for (int i = 0; i < sequence.length; i++) {
             if (i == hiddenElem) {
                 s = s.concat("..").concat(" ");
             } else {
-                s = s.concat(String.valueOf(posled[i])).concat(" ");
+                s = s.concat(String.valueOf(sequence[i])).concat(" ");
             }
         }
         Engine.question(s);
-        if ((!NumberUtils.isCreatable(Engine.answer)) && (Engine.answer != null)) {
+        if ((!NumberUtils.isCreatable(Engine.getAnswer())) && (Engine.getAnswer() != null)) {
             return false;
         }
-        if (Integer.parseInt(Engine.answer) != Integer.parseInt(Engine.corrAnswer)) {
+        if (Integer.parseInt(Engine.getAnswer()) != Integer.parseInt(Engine.getCorrectAnswer())) {
             return false;
         }
         return true;

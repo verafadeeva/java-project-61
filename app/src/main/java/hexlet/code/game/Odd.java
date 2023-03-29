@@ -9,16 +9,14 @@ public class Odd {
 
     public static boolean gameChet() {
         Random random = new Random();
-        int randomSeed = 20; //random seed
-        int num = random.nextInt(randomSeed);
+        int num = random.nextInt(20);
         if (num % 2 == 0) {
-            Engine.corrAnswer = "yes";
+            Engine.setCorrectAnswer("yes");
         } else {
-            Engine.corrAnswer = "no";
+            Engine.setCorrectAnswer("no");
         }
         Engine.question(String.valueOf(num));
-        return ((num % 2 == 0) & (Engine.answer.equalsIgnoreCase("yes")))
-                || ((num % 2 != 0) & (Engine.answer.equalsIgnoreCase("no")));
+        return (Engine.getAnswer().equalsIgnoreCase(Engine.getCorrectAnswer()));
     }
 
     public static void chet() {
