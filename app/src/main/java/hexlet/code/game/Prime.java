@@ -6,10 +6,10 @@ import org.apache.commons.math3.primes.Primes;
 import java.util.Random;
 
 public class Prime {
-
+    private static final int PRIME_RANDOM_SEED = 100;
     public static boolean gamePrime() {
         Random random = new Random();
-        int num = random.nextInt(100);
+        int num = random.nextInt(PRIME_RANDOM_SEED);
         if (Primes.isPrime(num)) {
             Engine.setCorrectAnswer("yes");
         } else {

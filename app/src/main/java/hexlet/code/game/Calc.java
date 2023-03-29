@@ -6,12 +6,13 @@ import org.apache.commons.lang3.math.NumberUtils;
 import java.util.Random;
 
 public class Calc {
-
+    private static final int RANDOM_SEED = 20;
+    private static final int OPERAND_RANDOM_SEED = 3;
     public static boolean gameCalc() {
         Random random = new Random();
-        int a = random.nextInt(20);
-        int b = random.nextInt(20);
-        int operand = random.nextInt(3);
+        int a = random.nextInt(RANDOM_SEED);
+        int b = random.nextInt(RANDOM_SEED);
+        int operand = random.nextInt(OPERAND_RANDOM_SEED);
         switch (operand) {
             case (0):
                 Engine.setCorrectAnswer(String.valueOf(a + b));

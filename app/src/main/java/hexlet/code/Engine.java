@@ -7,6 +7,12 @@ import hexlet.code.game.Calc;
 import hexlet.code.game.Gcd;
 
 public class Engine {
+    private static final String GAME_CODE_EVEN = "2";
+    private static final String GAME_CODE_CALC = "3";
+    private static final String GAME_CODE_GCD = "4";
+    private static final String GAME_CODE_SEQUENCE = "5";
+    private static final String GAME_CODE_PRIME = "6";
+    private static final int NUMBER_OF_ROUNDS = 3;
     private static String userName;
     private static String answer;
     private static String correctAnswer;
@@ -39,25 +45,24 @@ public class Engine {
     }
 
     public static void gameCore(int gameCode) {
-        int numberOfRounds = 3;
-        for (int i = 0; i < numberOfRounds; i++) {
-            if ((gameCode == 2) && (!Odd.gameChet())) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            if ((gameCode == Integer.parseInt(GAME_CODE_EVEN)) && (!Odd.gameChet())) {
                 wrongAnswer(answer, correctAnswer);
                 System.exit(0);
             }
-            if ((gameCode == 3) && (!Calc.gameCalc())) {
+            if ((gameCode == Integer.parseInt(GAME_CODE_CALC)) && (!Calc.gameCalc())) {
                 wrongAnswer(answer, correctAnswer);
                 System.exit(0);
             }
-            if ((gameCode == 4) && (!Gcd.gameGcd())) {
+            if ((gameCode == Integer.parseInt(GAME_CODE_GCD)) && (!Gcd.gameGcd())) {
                 wrongAnswer(answer, correctAnswer);
                 System.exit(0);
             }
-            if ((gameCode == 5) && (!Sequence.gameSequence())) {
+            if ((gameCode == Integer.parseInt(GAME_CODE_SEQUENCE)) && (!Sequence.gameSequence())) {
                 wrongAnswer(answer, correctAnswer);
                 System.exit(0);
             }
-            if ((gameCode == 6) && (!Prime.gamePrime())) {
+            if ((gameCode == Integer.parseInt(GAME_CODE_PRIME)) && (!Prime.gamePrime())) {
                 wrongAnswer(answer, correctAnswer);
                 System.exit(0);
             }

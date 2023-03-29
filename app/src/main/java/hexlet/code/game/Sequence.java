@@ -6,15 +6,16 @@ import org.apache.commons.lang3.math.NumberUtils;
 import java.util.Random;
 
 public class Sequence {
-
+    private static final int SEQUENCE_RANDOM_SEED = 8;
+    private static final int SEQUENCE_LENGTH = 10;
     public static boolean gameSequence() {
         Random random = new Random();
-        int seed = random.nextInt(8) + 1;
-        int[] sequence = new int[10];
+        int seed = random.nextInt(SEQUENCE_RANDOM_SEED) + 1;
+        int[] sequence = new int[SEQUENCE_LENGTH];
         for (int i = 0; i < sequence.length; i++) {
             sequence[i] = i * seed;
         }
-        int hiddenElem = random.nextInt(10);
+        int hiddenElem = random.nextInt(SEQUENCE_LENGTH);
         Engine.setCorrectAnswer(String.valueOf(sequence[hiddenElem]));
         String s = "";
         for (int i = 0; i < sequence.length; i++) {

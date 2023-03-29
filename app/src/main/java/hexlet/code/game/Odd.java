@@ -6,16 +6,16 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Odd {
-
+    private static final int EVEN_RANDOM_SEED = 100;
     public static boolean gameChet() {
         Random random = new Random();
-        int num = random.nextInt(20);
-        if (num % 2 == 0) {
+        int number = random.nextInt(EVEN_RANDOM_SEED);
+        if (number % 2 == 0) {
             Engine.setCorrectAnswer("yes");
         } else {
             Engine.setCorrectAnswer("no");
         }
-        Engine.question(String.valueOf(num));
+        Engine.question(String.valueOf(number));
         return (Engine.getAnswer().equalsIgnoreCase(Engine.getCorrectAnswer()));
     }
 

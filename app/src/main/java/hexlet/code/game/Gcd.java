@@ -6,7 +6,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 import java.util.Random;
 
 public class Gcd {
-
+    private static final int NUMBER_RANDOM_SEED = 100;
     public static int nod(int a, int b) {
         while (b != 0) {
             int temp = a % b;
@@ -18,8 +18,8 @@ public class Gcd {
 
     public static boolean gameGcd() {
         Random random = new Random();
-        int a = random.nextInt(100);
-        int b = random.nextInt(100);
+        int a = random.nextInt(NUMBER_RANDOM_SEED);
+        int b = random.nextInt(NUMBER_RANDOM_SEED);
         Engine.setCorrectAnswer(String.valueOf(nod(a, b)));
         Engine.question(String.valueOf(a) + " " + String.valueOf(b));
         if ((!NumberUtils.isCreatable(Engine.getAnswer())) && (Engine.getAnswer() != null)) {
